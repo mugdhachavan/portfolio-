@@ -14,7 +14,7 @@ type ThemeMode = 'dark' | 'light';
 })
 export class NavbarComponent implements OnInit {
   @Input({ required: true }) name!: string;
-  @Input() resumeUrl = '/resume.pdf';
+  @Input() resumeUrl = 'resume.pdf';
 
   readonly navItems: NavItem[] = [
     { label: 'Home', href: '#home', icon: 'home' },

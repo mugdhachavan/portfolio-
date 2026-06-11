@@ -33,7 +33,7 @@ export class ProjectsComponent {
       stack: ['Python', 'Flask', 'PostgreSQL', 'SQLAlchemy', 'JWT', 'REST APIs', 'HTML', 'CSS', 'JavaScript'],
       features: ['Centralized election workflow', 'Secure auth (JWT)', 'REST API integration', 'Analytics-ready data'],
       repoUrl: 'https://github.com/mugdhachavan/',
-      imageUrl: 'public/projects/logo.png',
+      imageUrl: 'projects/logo.png',
       imageFit: 'cover',
       imagePosition: 'center 72%',
       category: 'web'
@@ -45,7 +45,7 @@ export class ProjectsComponent {
       stack: ['Python', 'OpenCV', 'YOLO', 'Streamlit', 'Computer Vision'],
       features: ['Real-time detection', 'Threat monitoring', 'Processed output videos', 'Dashboard UI'],
       repoUrl: 'https://github.com/mugdhachavan/',
-      imageUrl: '/projects/surveillance.png',
+      imageUrl: 'projects/surveillance.png',
       category: 'ai'
     },
     {
@@ -55,7 +55,7 @@ export class ProjectsComponent {
       stack: ['Python', 'OpenCV', 'YOLO', 'Computer Vision'],
       features: ['Vehicle detection', 'Lane density estimation', 'Adaptive green timing', 'Video-based monitoring'],
       repoUrl: 'https://github.com/mugdhachavan/',
-      imageUrl: '/projects/traffic.png',
+      imageUrl: 'projects/traffic.png',
       category: 'ai'
     },
     {
@@ -65,7 +65,7 @@ export class ProjectsComponent {
       stack: ['Angular', 'Node.js', 'Express.js', 'MySQL', 'Sequelize', 'JWT'],
       features: ['Role-based authentication', 'Patient records', 'HR dashboard', 'Responsive UI', 'REST API integration'],
       liveUrl: '#contact',
-      imageUrl: '/projects/HMS.png',
+      imageUrl: 'projects/HMS.png',
       category: 'web'
     },
     {
@@ -76,7 +76,7 @@ export class ProjectsComponent {
       features: ['Video processing', 'Human detection', 'Alert system', 'Dashboard integration', 'AI/ML monitoring'],
       liveUrl: '#contact',
       repoUrl: 'https://github.com/mugdhachavan/ai-surveillance',
-      imageUrl: '/projects/surveillance.png',
+      imageUrl: 'projects/surveillance.png',
       imageFit: 'cover',
       imagePosition: 'center',
       category: 'ai'
@@ -88,7 +88,7 @@ export class ProjectsComponent {
       stack: ['Angular', 'TypeScript', 'UI/UX', 'Charts', 'Responsive Design'],
       features: ['Plot availability view', 'Block-wise data', 'Revenue cards', 'Professional layout', 'Responsive dashboard'],
       liveUrl: '#contact',
-      imageUrl: '/projects/residential-dev.png',
+      imageUrl: 'projects/residential-dev.png',
       category: 'web'
     },
     {
@@ -97,7 +97,7 @@ export class ProjectsComponent {
       stack: ['Angular', 'TypeScript', 'Leaflet/Maps'],
       features: ['Interactive map', 'Dashboard cards', 'Module layout', 'Responsive UI'],
       liveUrl: '#contact',
-      imageUrl: '/projects/van-ai.png',
+      imageUrl: 'projects/van-ai.png',
       category: 'web'
     }
   ];

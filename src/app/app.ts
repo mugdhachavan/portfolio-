@@ -34,6 +34,6 @@ export class App {
     phone: '+91 9158425353',
     linkedin: 'https://www.linkedin.com/in/mugdha-chavan-b49417257/',
     github: 'https://github.com/mugdhachavan/',
-    resumeUrl: '/resume.pdf'
+    resumeUrl: 'resume.pdf'
   };
 }

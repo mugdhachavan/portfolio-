@@ -14,7 +14,7 @@ type FloatingCard = { title: string; desc: string };
 export class HeroComponent {
   @Input({ required: true }) name!: string;
   @Input({ required: true }) role!: string;
-  @Input() resumeUrl = '/resume.pdf';
+  @Input() resumeUrl = 'resume.pdf';
 
   readonly headlineChips = ['Angular Developer', 'Full Stack Developer', 'AI/ML Enthusiast'];
 
@@ -35,4 +35,3 @@ export class HeroComponent {
     { title: 'Clean Code', desc: 'Reusable, maintainable components' }
   ];
 }
-
