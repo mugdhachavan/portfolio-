@@ -33,7 +33,7 @@ export class ProjectsComponent {
       stack: ['Python', 'Flask', 'PostgreSQL', 'SQLAlchemy', 'JWT', 'REST APIs', 'HTML', 'CSS', 'JavaScript'],
       features: ['Centralized election workflow', 'Secure auth (JWT)', 'REST API integration', 'Analytics-ready data'],
       repoUrl: 'https://github.com/mugdhachavan/',
-      imageUrl: '/projects/logo.png',
+      imageUrl: 'public/projects/logo.png',
       imageFit: 'cover',
       imagePosition: 'center 72%',
       category: 'web'
