@@ -1,0 +1,19 @@
+<section id="services" class="section">
+  <div class="container">
+    <div class="section-head">
+      <p class="kicker">Services</p>
+      <h2 class="h2">What I can build for you</h2>
+      <p class="sub">From premium UI to full-stack delivery—focused on outcomes and performance.</p>
+    </div>
+
+    <div class="services-grid">
+      <article class="card service" *ngFor="let s of services">
+        <div class="icon" aria-hidden="true">{{ s.icon }}</div>
+        <h3 class="h3">{{ s.title }}</h3>
+        <p class="desc">{{ s.desc }}</p>
+        <a class="link" href="#contact">Let’s talk →</a>
+      </article>
+    </div>
+  </div>
+</section>
+

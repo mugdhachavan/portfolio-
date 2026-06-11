@@ -1,0 +1,18 @@
+<app-navbar [name]="profile.name" [resumeUrl]="profile.resumeUrl"></app-navbar>
+
+<main class="app-shell">
+  <app-hero [name]="profile.name" [role]="profile.role" [resumeUrl]="profile.resumeUrl"></app-hero>
+  <app-about></app-about>
+  <app-education></app-education>
+  <app-skills></app-skills>
+  <app-projects></app-projects>
+  <app-experience></app-experience>
+  <app-contact
+    [email]="profile.email"
+    [phone]="profile.phone"
+    [linkedin]="profile.linkedin"
+    [github]="profile.github"
+  ></app-contact>
+</main>
+
+<app-footer [name]="profile.name" [linkedin]="profile.linkedin" [github]="profile.github"></app-footer>

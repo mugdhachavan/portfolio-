@@ -1,0 +1,125 @@
+<section id="projects" class="section">
+  <div class="container">
+    <div class="section-head">
+      <p class="kicker">Projects</p>
+      <h2 class="h2">Work that reflects production thinking</h2>
+      <p class="sub">Premium UI, clean architecture, secure auth, scalable APIs, and dashboards that ship.</p>
+    </div>
+
+    <div class="filters" aria-label="Project filters">
+      <button
+        class="filter"
+        type="button"
+        [class.is-active]="activeFilter === 'all'"
+        (click)="activeFilter = 'all'"
+      >
+        All
+      </button>
+      <button
+        class="filter"
+        type="button"
+        [class.is-active]="activeFilter === 'ai'"
+        (click)="activeFilter = 'ai'"
+      >
+        AI/ML
+      </button>
+      <button
+        class="filter"
+        type="button"
+        [class.is-active]="activeFilter === 'web'"
+        (click)="activeFilter = 'web'"
+      >
+        Web
+      </button>
+    </div>
+
+    <div class="projects-grid">
+      <article class="card project" *ngFor="let p of filteredProjects">
+        <div class="project-media" aria-hidden="true" [class.has-image]="!!p.imageUrl">
+          <ng-container *ngIf="p.imageUrl; else mediaFallback">
+            <img
+              class="project-img"
+              [src]="p.imageUrl"
+              [alt]="p.title + ' image'"
+              loading="lazy"
+              [style.objectFit]="p.imageFit || null"
+              [style.objectPosition]="p.imagePosition || null"
+            />
+          </ng-container>
+          <ng-template #mediaFallback>
+            <div class="project-media-inner">
+              <div class="project-media-icon">&lt;/&gt;</div>
+              <div class="project-media-kicker">Featured Project</div>
+            </div>
+          </ng-template>
+        </div>
+
+        <div class="project-head">
+          <h3 class="h3">{{ p.title }}</h3>
+          <span class="tag">Featured</span>
+        </div>
+
+        <div class="stack" aria-label="Tech stack">
+          <span class="pill" *ngFor="let s of p.stack.slice(0, 6)">{{ s }}</span>
+        </div>
+
+        <div class="actions">
+          <button class="btn btn-primary details" type="button" (click)="openDetails(p)">View Details</button>
+        </div>
+      </article>
+    </div>
+
+    <div
+      class="project-modal"
+      *ngIf="selectedProject as sp"
+      role="dialog"
+      aria-modal="true"
+      [attr.aria-label]="sp.title + ' details'"
+      (click)="closeDetails()"
+    >
+      <div class="project-dialog card" (click)="$event.stopPropagation()">
+        <div class="dialog-head">
+          <div>
+            <p class="kicker">Project Details</p>
+            <h3 class="h2">{{ sp.title }}</h3>
+          </div>
+          <button class="icon-x" type="button" aria-label="Close project details" (click)="closeDetails()">
+            ×
+          </button>
+        </div>
+
+        <p class="dialog-desc">{{ sp.description }}</p>
+
+        <div class="dialog-stack" aria-label="Tech stack">
+          <span class="pill" *ngFor="let s of sp.stack">{{ s }}</span>
+        </div>
+
+        <div class="dialog-cols">
+          <div class="dialog-col">
+            <div class="dialog-label">Highlights</div>
+            <ul class="dialog-features">
+              <li *ngFor="let f of sp.features">{{ f }}</li>
+            </ul>
+          </div>
+
+          <div class="dialog-col">
+            <div class="dialog-label">Links</div>
+            <div class="dialog-actions">
+              <a
+                class="btn btn-ghost"
+                *ngIf="sp.repoUrl"
+                [href]="sp.repoUrl"
+                target="_blank"
+                rel="noopener"
+                (click)="$event.stopPropagation()"
+              >
+                GitHub
+              </a>
+              <a class="btn btn-glass" href="#contact" (click)="closeDetails()">Contact Me</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

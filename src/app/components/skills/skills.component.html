@@ -1,0 +1,23 @@
+<section id="skills" class="section">
+  <div class="container">
+    <div class="section-head">
+      <p class="kicker">Skills</p>
+      <h2 class="h2">A focused stack for real-world products</h2>
+      <p class="sub">Clean, scalable engineering across UI, APIs, databases, and AI/ML fundamentals.</p>
+    </div>
+
+    <div class="skills-grid">
+      <article class="card category" *ngFor="let cat of categories">
+        <div class="cat-top">
+          <h3 class="h3">{{ cat.title }}</h3>
+          <span class="badge">{{ cat.skills.length }} skills</span>
+        </div>
+
+        <div class="skill-wrap">
+          <span class="skill" *ngFor="let s of cat.skills">{{ s }}</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+

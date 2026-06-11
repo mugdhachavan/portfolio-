@@ -1,0 +1,7 @@
+.app-shell {
+  display: block;
+}
+
+.app-shell > * {
+  display: block;
+}

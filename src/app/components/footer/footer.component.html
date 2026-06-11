@@ -1,0 +1,20 @@
+<footer class="footer">
+  <div class="container inner">
+    <div class="left">
+      <div class="brand">
+        <span class="dot" aria-hidden="true"></span>
+        <span class="text">{{ name }}</span>
+      </div>
+      <div class="meta">Full Stack Developer • Angular • AI/ML</div>
+    </div>
+
+    <div class="right">
+      <div class="links">
+        <a class="link" href="#home">Back to top</a>
+        <a class="link" *ngIf="linkedin" [href]="linkedin" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="link" *ngIf="github" [href]="github" target="_blank" rel="noopener">GitHub</a>
+      </div>
+      <div class="copy">© {{ year }} {{ name }}. All rights reserved.</div>
+    </div>
+  </div>
+</footer>

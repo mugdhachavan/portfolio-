@@ -1,0 +1,29 @@
+<section id="education" class="section">
+  <div class="container">
+    <div class="section-head">
+      <p class="kicker">Education</p>
+      <h2 class="h2">Academic background</h2>
+    </div>
+
+    <div class="edu-timeline card" aria-label="Education timeline">
+      <article class="edu-item" *ngFor="let item of education; let i = index">
+        <div class="edu-date">{{ item.date }}</div>
+
+        <div class="edu-card">
+          <div class="edu-top">
+            <div>
+              <h3 class="h3">{{ item.title }}</h3>
+              <div class="meta">{{ item.org }}</div>
+            </div>
+            <span class="edu-pill">Education</span>
+          </div>
+
+          <ul class="points">
+            <li *ngFor="let p of item.points">{{ p }}</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+

@@ -1,0 +1,89 @@
+.timeline {
+  padding: 18px;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 38px 1fr;
+  gap: 12px;
+  position: relative;
+  padding: 14px 0;
+}
+
+.timeline-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: 18px;
+  top: 54px;
+  bottom: 0;
+  width: 2px;
+  background: color-mix(in srgb, var(--stroke) 55%, transparent);
+}
+
+.marker {
+  position: relative;
+  display: grid;
+  place-items: start center;
+}
+
+.dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 999px;
+  background: var(--accent-gradient);
+  box-shadow: 0 0 0 6px color-mix(in srgb, var(--primary) 14%, transparent);
+  margin-top: 8px;
+}
+
+.content {
+  border-radius: 18px;
+  border: 1px solid color-mix(in srgb, var(--stroke) 55%, transparent);
+  background: color-mix(in srgb, var(--surface-1) var(--glass-1), transparent);
+  padding: 14px;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.meta {
+  margin-top: 4px;
+  color: var(--text-2);
+  font-weight: 700;
+}
+
+.pill {
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--stroke) 60%, transparent);
+  background: color-mix(in srgb, var(--surface-0) 32%, transparent);
+  color: var(--text-0);
+  font-weight: 800;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.points {
+  margin: 10px 0 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 6px;
+  color: var(--text-1);
+  line-height: 1.55;
+  font-weight: 650;
+}
+
+@media (max-width: 425px) {
+  .timeline-item {
+    grid-template-columns: 1fr;
+  }
+  .timeline-item:not(:last-child)::after {
+    display: none;
+  }
+  .marker {
+    display: none;
+  }
+}
